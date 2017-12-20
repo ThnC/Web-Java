@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//WebContent/admin/header.jsp=UTF-8
+encoding//WebContent/admin/insert_category.jsp=UTF-8
+encoding//WebContent/admin/manager_chart.jsp=UTF-8
+encoding//WebContent/admin/update_category.jsp=UTF-8
+encoding//src/controller/PaymentServlet.java=UTF-8
+encoding//src/dao/CategoryDAO.java=UTF-8
+encoding//src/dao/CategoryDAOImpl.java=UTF-8
