@@ -189,7 +189,25 @@ public static boolean deleteProduct(String product_id) {
 }
 
 
-
+public static ArrayList<Product> getTop8Lastest() throws SQLException {
+    Connection conn = DBConnect.getConnection();
+	String sql = "select * from product order by pro_id desc limit 8";
+	PreparedStatement ps = conn.prepareStatement(sql);
+	ResultSet rs = ps.executeQuery();
+	ArrayList<Product> list = new ArrayList<Product>();
+	while(rs.next()) {
+		Product pro = new Product();
+		pro.setCategory_id(rs.getString("category_id"));
+		pro.setProduct_description(rs.getString("description"));
+		pro.setProduct_id(rs.getString("product_id"));
+		pro.setProduct_image(rs.getString("product_image"));
+		pro.setProduct_quantity(rs.getInt("product_quantity"));
+		pro.setProduct_name(rs.getString("product_name"));
+		pro.setProduct_price(rs.getDouble("product_price"));
+		list.add(pro);
+	}
+	return list;
+}
 public static void main(String[] args) {
 //	Product p = new Product();
 //	p.setCategory_id(2+"");

@@ -69,12 +69,6 @@
 			</div>
 			<!--/category-products-->
 
-			<div class="shipping text-center">
-				<!--shipping-->
-				<img src="images/home/shipping.jpg" alt="" />
-			</div>
-			<!--/shipping-->
-			<div style="clear: both; margin-bottom: 70px;"></div>
 
 		</div>
 	</div>

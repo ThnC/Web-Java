@@ -1,3 +1,7 @@
+<%@page import="model.Product"%>
+<%@page import="model.Cart"%>
+<%@page import="java.text.NumberFormat"%>
+<%@page import="dao.ProductDAOImpl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,13 +30,48 @@
 	<jsp:include page="banner.jsp"></jsp:include>
 	<section>
 		<div class="container">
-			<div class="row">
-				<jsp:include page="category.jsp"></jsp:include>
-				<% if(request.getParameter("category_id")!=null){ %>
-				<jsp:include page="product.jsp"></jsp:include>
-		<%} %>
 
+			<div class="row">
+			<jsp:include page="category.jsp"></jsp:include>
+				<%
+					if (request.getParameter("category_id") != null) {
+				%> 
+			<jsp:include page="product.jsp" ></jsp:include> 
+				<%
+ 					}
+ 				%>
+
+				<div class="col-sm-9 padding-right">
+					<div class="features_items">
+						<!--features_items-->
+						<h2 class="title text-center">Features Items</h2> 
+						<%
+ 							if (request.getParameter("category_id") == null) {
+ 						%>
+ 						<div class="col-sm-12">
+							<div class="col-md-4"><img alt="" src="/WebBH/img/CLEVELAND_CAVALIERS_NIKE_THERMA_FLEX_SHOWTIME.jpg" width="250px" /></div>
+							<div class="col-md-4"><img alt="" src="/WebBH/img/TIRO 17 TRAINING PANTSx.jpg" width="250px" /></div>
+							<div class="col-md-4"><img alt="" src="/WebBH/img/NIKE_SPORTSWEAR_TECH_FLEECE.jpg" width="250px" /></div>
+							 
+						</div>
+						 
+							<div class="col-md-12" style="padding:20px 0 20px 0"><img alt="" src="/WebBH/img/NIKELAB_ACG_ALPINE_4.jpg" width="900px" /></div>
+						
+						 <div class="col-sm-12">
+							<div class="col-md-4"><img alt="" src="/WebBH/img/SPEEDBREAKER HYPE SPEED-PRINT SHORTS.jpg" width="250px" /></div>
+							<div class="col-md-4"><img alt="" src="/WebBH/img/TIRO 17 TRAINING PANTS.jpg" width="250px" /></div>
+							<div class="col-md-4"><img alt="" src="/WebBH/img/NIKE_SPORTSWEAR_TECH_AEROLOFT_3-IN-1_praka.jpg" width="250px" /></div> 
+						</div>
+						<%
+ 							}
+ 						%>
+
+					</div>
+				</div>
 			</div>
+
+
+
 		</div>
 	</section>
 
