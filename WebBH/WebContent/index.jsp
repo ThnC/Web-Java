@@ -55,7 +55,9 @@
 							 
 						</div>
 						 
-							<div class="col-md-12" style="padding:20px 0 20px 0"><img alt="" src="/WebBH/img/NIKELAB_ACG_ALPINE_4.jpg" width="900px" /></div>
+							<div class="col-md-12" >
+								<img alt="" src="/WebBH/img/NIKELAB_ACG_ALPINE_4.jpg" style="padding:20px 0 20px 0; max-width: 100%;height: auto;" />
+							</div>
 						
 						 <div class="col-sm-12">
 							<div class="col-md-4"><img alt="" src="/WebBH/img/SPEEDBREAKER HYPE SPEED-PRINT SHORTS.jpg" width="250px" /></div>
